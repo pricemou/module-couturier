@@ -1,0 +1,52 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="atelier_atelier_form_view">
+            <field name="name">atelier.atelier.form.view</field>
+            <field name="model">atelier.atelier</field>
+            <field name="arch" type="xml">
+                <form string="Atelier">
+
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="client" />
+                            </group>
+                        </group>
+                        <group>
+                             <notebook>
+                                <page string="Vos Clients">
+                                    <field name="liaison_client" />
+                                </page>
+                            </notebook>
+                        </group>
+                        
+
+                    </sheet>
+
+                </form>
+
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="atelier_atelier_tree_view">
+            <field name="name">atelier.atelier.tree.view</field>
+            <field name="model">atelier.atelier</field>
+            <field name="arch" type="xml">
+                <tree string="Atelier">
+                    <field name="client" />
+                </tree>
+            </field>
+        </record>
+
+
+
+        <record model="ir.actions.act_window" id="action_atelier">
+            <field name="name">Atelier</field>
+            <field name="res_model">atelier.atelier</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="couture_atelier" name="model" parent="couture_parent" action="action_atelier" />
+    </data>
+</odoo>

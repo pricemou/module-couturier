@@ -1,0 +1,79 @@
+<odoo>
+  <data>
+     <record model="ir.ui.view" id="salon_de__couture_form_view">
+            <field name="name">salon_de__couture.salon_de__couture.form.view</field>
+            <field name="model">salon_de__couture.salon_de__couture</field>
+            <field name="arch" type="xml">
+                <form string="Salon de couture">
+                    
+                     <sheet>
+                        <group>
+                             <group>
+                                <h2 class="lead">And this is a subtitle</h2>
+                                <field name="nom" />
+                                <field name="prenom" />
+                                <field name="age" />
+                            </group>
+                            <group>
+                                <field name="date_de_naissance" />
+                                <field name="contact" />
+                                <field name="specialite" />
+                                <field name="nb_mesure" />
+                                
+                            </group>
+                            <notebook>
+                                <page string="Mesures">
+                                    <group>
+                                        <field name="date_de_naissance" />
+                                        <field name="contact" />
+                                        <field name="specialite" />
+                                        <field name="nb_mesure" />
+                                    </group>
+                                </page>
+                                <page string="Moyenne d’âge">
+                                        <field name="claude" />
+                                </page>
+                                <page string="Totaux">
+                                    
+                                </page>
+                                <page string="Couturier actif">
+                                    
+                                </page>
+                            </notebook>
+                        </group>
+                        
+                    </sheet>
+                    
+                </form>
+
+            </field>
+        </record>
+
+
+        <record model="ir.ui.view" id="salon_de__couture_tree_view">
+            <field name="name">salon_de__couture.salon_de__couture.tree.view</field>
+            <field name="model">salon_de__couture.salon_de__couture</field>
+            <field name="arch" type="xml">
+                <tree string="Salon de couture">
+                    <field name="nom" />
+                    <field name="prenom" />
+                    <field name="age" />
+                    <field name="date_de_naissance" />
+                    <field name="contact" />
+                    <field name="specialite" />
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_salon_de__couture">
+            <field name="name">Couturier</field>
+            <field name="res_model">salon_de__couture.salon_de__couture</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <menuitem id="couture_parent" name="Gérer un salon de Couture" sequence="0" />
+        <menuitem id="couture_enfant" name="Couturie" parent="couture_parent" action="action_salon_de__couture" />
+  </data>
+</odoo>

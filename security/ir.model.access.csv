@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_salon_de__couture_salon_de__couture,salon_de__couture.salon_de__couture,model_salon_de__couture_salon_de__couture,base.group_user,1,1,1,1
+access_salon_de__couture_salon_de__couture,salon_de__couture.salon_de__couture,model_salon_de__couture_salon_de__couture,base.group_system,1,1,1,1
+
+access_atelier_atelier,atelier.atelier,model_atelier_atelier,base.group_system,1,1,1,1
+access_atelier_atelier,atelier.atelier,model_atelier_atelier,base.group_user,1,1,1,1
+
+access_mesure_mesure,mesure.mesure,model_mesure_mesure,base.group_user,1,1,1,1
+access_mesure_mesure,mesure.mesure,model_mesure_mesure,base.group_system,1,1,1,1

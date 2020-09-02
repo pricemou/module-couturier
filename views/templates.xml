@@ -1,0 +1,58 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="mesure_mesure_form_view">
+            <field name="name">mesure.mesure.form.view</field>
+            <field name="model">mesure.mesure</field>
+            <field name="arch" type="xml">
+                <form string="Salon de couture">
+
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="autour_poitrine" />
+                                <field name="auteur_taille" />
+                                <field name="tour_de_poitrine" />
+                                <field name="tour_du_poigner" />
+                            </group>
+                            <group>
+                                <field name="longueur_du_bras" />
+                                <field name="tour_de_hancher" />
+                                <field name="tour_du_bras" />
+                                <field name="hauteur_de_taille" />
+                                <field name="photo" widget="image" force_save="1"
+                                    options="{'preview_image':'image_small','size':[100,100]}" />
+                            </group>
+                        </group>
+
+                    </sheet>
+
+                </form>
+
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="mesure_mesure_tree_view">
+            <field name="name">mesure.mesure.tree.view</field>
+            <field name="model">mesure.mesure</field>
+            <field name="arch" type="xml">
+                <tree string="couture">
+                    <field name="longueur_du_bras" />
+                    <field name="tour_de_hancher" />
+                    <field name="tour_du_bras" />
+                    <field name="hauteur_de_taille" />
+                </tree>
+            </field>
+        </record>
+
+
+
+        <record model="ir.actions.act_window" id="action_mesure">
+            <field name="name">mesure</field>
+            <field name="res_model">mesure.mesure</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="couture_mesure" name="mesure" parent="couture_parent" action="action_mesure" />
+    </data>
+</odoo>
